@@ -1,4 +1,5 @@
 import { useState } from "react"
+import kratos from "./assets/kratos.jpg"
 import "./App.css"
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
         return (
             <div>
                 <h1>😁😁Fathan Ganteng😁😁</h1>
-                <h1 style={{ textAlign: "center", color: "pink" }}>
-                    {">///<"}
-                </h1>
+                <img src={kratos} />
             </div>
         )
     }
