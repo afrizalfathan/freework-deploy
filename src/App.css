@@ -1,4 +1,37 @@
-body {
-  display: flex;
-  justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Poppins&display=swap");
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.home-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 93vh;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+  color: #C69749;
+}
+
+.button-container button {
+  border-radius: 25px;
+  border: 3.5px solid #C69749;
+  padding: 10px;
+  margin-right: 1%;
+  background-color: transparent;
+}
+
+.about-text {
+    padding: 15% 0 0 11%;
+}
+
+.svg-image {
+  margin-top: 11%;
+  margin-right: 11%;
 }
