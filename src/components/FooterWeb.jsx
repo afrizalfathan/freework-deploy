@@ -7,14 +7,6 @@ import {
     MDBIcon,
     MDBBtn,
 } from "mdb-react-ui-kit"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faFacebook,
-    faLinkedin,
-    faGit,
-    faInstagram,
-    faTwitter,
-} from "@fortawesome/free-brands-svg-icons"
 
 export default function FooterWeb() {
     return (
@@ -92,9 +84,9 @@ export default function FooterWeb() {
                 className="text-center p-3"
                 style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
             >
-                © 2020 Copyright:
+                © 2020 Copyright :{" "}
                 <a className="text-white" href="https://mdbootstrap.com/">
-                    MDBootstrap.com
+                    Freework.com
                 </a>
             </div>
         </MDBFooter>

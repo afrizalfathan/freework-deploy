@@ -17,6 +17,7 @@
     height: 85vh;
     background-position: center;
     color: white;
+    margin: auto;
 }
 
 .logo {
@@ -37,13 +38,8 @@
     margin-top: 5%;
 }
 
-.home-text-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.home-text {
-    padding: 11% 0 0 11%;
+.text-intro-container{
+  padding-top: 10%;
 }
 
 .proses-box {
@@ -51,8 +47,6 @@
 }
 
 .proses-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 3%;
 }
 
@@ -72,11 +66,6 @@
     color: #c69749;
 }
 
-.freelance-info-container {
-    display: flex;
-    justify-content: center;
-}
-
 .freelance-web-info {
     background-image: linear-gradient(
             rgba(0, 0, 0, 0.629),
@@ -85,13 +74,13 @@
         url("./assets/2.jpg");
     background-position: center;
     background-size: cover;
-    width: 25%;
     min-height: 13rem;
     color: white;
     display: flex;
     justify-content: center;
+    border-radius: 25px;
     align-items: center;
-    margin-right: 5%;
+    margin-top: 10%;
 }
 
 .freelance-design-info {
@@ -102,16 +91,18 @@
         url("./assets/3.jpg");
     background-position: center;
     background-size: cover;
-    width: 25%;
     min-height: 13rem;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 25px;
+    margin-top: 10%;
   }
   
   .prosess-header-info {
-    margin-top: 10%;
+    margin-top: 13%;
+    margin-bottom: 6%;
   }
 
 .freelance-info-header {
@@ -120,16 +111,10 @@
   margin-bottom: 3%;
 }
 
-.reason-container {
-  display: flex;
-  justify-content: center;
+.reason-box{
+  text-align: center;
 }
 
-.reason-box {
-  text-align: center;
-  padding: 4%;
-  margin-bottom: 6%;
-}
 
 .reason-header {
   text-align: center;
@@ -145,4 +130,31 @@
 
 .reason-box h4 {
   margin-bottom: 6%;
+}
+
+.reason-container {
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.login-page-container {
+  display: flex;
+  min-height: 80vh;
+}
+
+.login-container {
+  margin: auto;
+  text-align: center;
+}
+
+hr {
+  display: inline-block; 
+  width: 7rem;
+  position: relative;
+  top: .7em;
+}
+
+.other-login {
+  display: flex;
+  flex-direction: row;
 }

@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import { Link } from "react-router-dom"
 
 function Navigation() {
     return (
@@ -15,7 +16,11 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link>
+                            <Link to="/freework-deploy" className="text-dark">
+                                Home
+                            </Link>
+                        </Nav.Link>
                         <NavDropdown title="Cari Kerja" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">
                                 Web Developer
@@ -36,7 +41,14 @@ function Navigation() {
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#home">Daftar</Nav.Link>
-                        <Nav.Link href="#home">Login</Nav.Link>
+                        <Nav.Link>
+                            <Link
+                                to="/freework-deploy/login"
+                                className="text-dark"
+                            >
+                                Login
+                            </Link>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
