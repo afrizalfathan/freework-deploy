@@ -20,7 +20,7 @@ function Home() {
             <div className="intro-container">
                 <Container fluid="md" className="text-intro-container">
                     <Row>
-                        <Col>
+                        <Col className="col-md-6">
                             <h1>
                                 Welcome to
                                 <span className="logo-info"> FreeWork</span> .

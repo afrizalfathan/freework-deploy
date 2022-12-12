@@ -17,7 +17,7 @@ function Navigation() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link>
-                            <Link to="/freework-deploy" className="text-dark">
+                            <Link to="/freework-deploy/" className="text-dark">
                                 Home
                             </Link>
                         </Nav.Link>
@@ -40,7 +40,14 @@ function Navigation() {
                                 Designer
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#home">Daftar</Nav.Link>
+                        <Nav.Link>
+                            <Link
+                                to="/freework-deploy/daftar"
+                                className="text-dark"
+                            >
+                                Daftar
+                            </Link>
+                        </Nav.Link>
                         <Nav.Link>
                             <Link
                                 to="/freework-deploy/login"

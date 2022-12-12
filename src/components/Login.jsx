@@ -1,25 +1,17 @@
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit"
+import { FaFacebookF, FaGoogle } from "react-icons/fa"
 import React from "react"
-import Button from "react-bootstrap/Button"
-import Form from "react-bootstrap/Form"
+import { Button, Form } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 function Login() {
     return (
-        <div className="login-page-container">
+        <div className="login-page">
             <div className="login-container">
-                <h1>Login</h1>
-                <div className="hr-divider">
-                    <hr />
-                    <span>Atau</span>
-                    <hr />
-                </div>
-                <div className="other-login">
-                    <Button>
-                        <MDBIcon fab icon="facebook-f" /> Login menggunakan
-                        Facebook
-                    </Button>
-                </div>
-
+                <h1 className="text-center m-4">Login</h1>
+                <p>
+                    Belum Punya akun ?{" "}
+                    <Link to="/freework-deploy/daftar">Buat Akun</Link>
+                </p>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -33,15 +25,29 @@ function Login() {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control
+                            className="border border-warning"
                             type="password"
                             placeholder="Password"
-                            className="border border-warning"
                         />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
+                    <div className="login-button-container">
+                        <a href="#">Lupa Password ? </a>
+                        <button className="login-button" type="submit">
+                            Submit
+                        </button>
+                    </div>
                 </Form>
+                <hr className="line-break" />
+                <div className="other-login d-flex m-3">
+                    <button className="other-login-button facebook-login">
+                        <FaFacebookF className="text-primary" /> Login
+                        Menggunakan Facebook
+                    </button>
+                    <button className="other-login-button" bg="warning">
+                        <FaGoogle className="text-danger" /> Login Menggunakan
+                        Google
+                    </button>
+                </div>
             </div>
         </div>
     )
