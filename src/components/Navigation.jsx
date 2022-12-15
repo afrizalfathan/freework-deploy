@@ -7,8 +7,11 @@ import NavDropdown from "react-bootstrap/NavDropdown"
 import { Link } from "react-router-dom"
 
 function Navigation() {
+    const navColor = {
+        backgroundColor: "#f1f2f3",
+    }
     return (
-        <Navbar bg="warning" expand="lg" variant="light" sticky="top">
+        <Navbar style={navColor} expand="lg" variant="light" sticky="top">
             <Container>
                 <Navbar.Brand href="#home">
                     <h3 className="logo">FreeWork</h3>
@@ -33,11 +36,15 @@ function Navigation() {
                             title="Cari Pekerja"
                             id="basic-nav-dropdown"
                         >
-                            <NavDropdown.Item href="#action/3.1">
-                                Web Developer
+                            <NavDropdown.Item>
+                                <Link to="/freework-deploy/freelance-web/">
+                                    Web Developer
+                                </Link>
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Designer
+                            <NavDropdown.Item>
+                                <Link to="/freework-deploy/freelance-design/">
+                                    Designer
+                                </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link>

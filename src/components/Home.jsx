@@ -9,7 +9,7 @@ import {
     faShieldHalved,
     faMoneyBillWheat,
 } from "@fortawesome/free-solid-svg-icons"
-
+import { Link } from "react-router-dom"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -57,14 +57,18 @@ function Home() {
                     <Container>
                         <Row md={3} className="justify-content-md-center">
                             <Col sm>
-                                <div className="freelance-web-info">
-                                    <h3>Web Developer</h3>
-                                </div>
+                                <Link>
+                                    <div className="freelance-web-info">
+                                        <h3>Web Developer</h3>
+                                    </div>
+                                </Link>
                             </Col>
                             <Col sm>
-                                <div className="freelance-design-info">
-                                    <h3>Designer</h3>
-                                </div>
+                                <Link>
+                                    <div className="freelance-design-info">
+                                        <h3>Designer</h3>
+                                    </div>
+                                </Link>
                             </Col>
                         </Row>
                     </Container>

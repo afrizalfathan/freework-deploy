@@ -1,14 +1,12 @@
 import React from "react"
-import {
-    MDBFooter,
-    MDBContainer,
-    MDBIcon,
-    MDBBtn,
-} from "mdb-react-ui-kit"
+import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit"
 
 export default function FooterWeb() {
     return (
-        <MDBFooter className="bg-dark text-center text-white">
+        <MDBFooter
+            className=" text-center text-white"
+            style={{ backgroundColor: "#363333" }}
+        >
             <MDBContainer className="p-4 pb-0">
                 <section className="mb-4">
                     <MDBBtn
@@ -80,7 +78,7 @@ export default function FooterWeb() {
 
             <div
                 className="text-center p-3"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+                style={{ backgroundColor: "#272121" }}
             >
                 © 2020 Copyright :{" "}
                 <a className="text-white" href="https://mdbootstrap.com/">

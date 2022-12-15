@@ -14,7 +14,9 @@ function Login() {
                 </p>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label className="text-muted">
+                            Email address
+                        </Form.Label>
                         <Form.Control
                             className="border border-warning"
                             type="email"
@@ -23,7 +25,7 @@ function Login() {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className="text-muted">Password</Form.Label>
                         <Form.Control
                             className="border border-warning"
                             type="password"
