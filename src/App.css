@@ -22,11 +22,11 @@
 }
 
 .logo {
-    color: #E16428;
+    color: #e4812f;
 }
 
 .logo-info {
-  color: #E16428;
+  color: #e4812f;
 }
 
 .button-container button {
@@ -34,7 +34,7 @@
     border: none;
     padding: 10px;
     margin-right: 1%;
-    background-color: black;
+    background-color: #e4812f;
     color: white;
     margin-top: 5%;
 }
@@ -150,6 +150,7 @@
 .login-container {
   max-width: 380px;
   margin: auto;
+
 }
 
 .other-login-button {
@@ -185,7 +186,7 @@
   height: 2rem;
   width: fit-content;
   margin-right: -4rem;
-  background-color: #000000;
+  background-color: black;
   color: white;
 }
 
@@ -195,10 +196,51 @@
   margin: auto;
 }
 
-.freelancer-container {
+.freelancer-filter {
+  margin-right: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  grid-area: sidebar;
+  background-color: white;
+}
+
+.freelancer-page {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+  "sidebar card card card";
+  grid-gap: 3rem 2rem;
+  margin: 4% 0 4% 4%;
+  background-image: 
+  url("./assets/wave.svg");
+}
+
+
+.main-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-area: card;
+  grid-gap: 2rem;
+}
+
+.image-profile {
+  border-radius: 50%;
+  padding: 10% 20% 0 20%;
+
+}
+
+.freelancer-search {
+  margin-top: 15%;
+}
+
+@media only screen and (max-width: 600px) {
+  .freelancer-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container {
+  grid-template-columns: 25%;
   margin: auto;
-  width: 70%;
+  }
 }

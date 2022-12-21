@@ -1,6 +1,5 @@
 import React from "react"
 import FreelanceWebUser from "../freelanceWebUser"
-import { Row, Container, Col } from "react-bootstrap"
 
 function FreelancerWeb() {
     return (
@@ -8,19 +7,19 @@ function FreelancerWeb() {
             <h1>Hire Web Developer</h1>
             {FreelanceWebUser.map((web) => (
                 <div className="freelancer-container">
-                    <Container>
-                        <Row>
-                            <Col>
-                                <p>{web.name}</p>
-                                <p>{web.skill}</p>
-                                <p>{web.description}</p>
-                                <hr />
-                            </Col>
-                            <Col>
-                                <button>Hire</button>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <div className="profile">
+                        <img src={web.image} className="profile-image" />
+                        <div className="profile-info">
+                            <p>
+                                <b>{web.name}</b>
+                            </p>
+                            <p>{web.skill}</p>
+                        </div>
+                    </div>
+
+                    <p className="description-freelancer">{web.description}</p>
+                    <button>Hire</button>
+                    <hr />
                 </div>
             ))}
         </>
