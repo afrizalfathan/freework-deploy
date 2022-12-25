@@ -57,14 +57,14 @@ function Home() {
                     <Container>
                         <Row md={3} className="justify-content-md-center">
                             <Col sm>
-                                <Link>
+                                <Link to="/freework-deploy/freelance-web/">
                                     <div className="freelance-web-info">
                                         <h3>Web Developer</h3>
                                     </div>
                                 </Link>
                             </Col>
                             <Col sm>
-                                <Link>
+                                <Link to="/freework-deploy/freelance-design/">
                                     <div className="freelance-design-info">
                                         <h3>Designer</h3>
                                     </div>

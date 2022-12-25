@@ -25,11 +25,15 @@ function Navigation() {
                             </Link>
                         </Nav.Link>
                         <NavDropdown title="Cari Kerja" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">
-                                Web Developer
+                            <NavDropdown.Item>
+                                <Link to="/freework-deploy/freelance-kerjaanWeb/">
+                                    Web Developer
+                                </Link>
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Designer
+                            <NavDropdown.Item>
+                                <Link to="/freework-deploy/freelance-kerjaanDesign/">
+                                    Designer
+                                </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown

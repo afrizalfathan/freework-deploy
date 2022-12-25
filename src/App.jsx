@@ -7,6 +7,8 @@ import Login from "./components/Login"
 import Daftar from "./components/Daftar"
 import FreelancerWeb from "./components/FreelancerWeb"
 import FreelancerDesign from "./components/FreelancerDesign"
+import KerjaanWeb from "./components/KerjaanWeb"
+import KerjaanDesign from "./components/KerjaanDesign"
 
 function App() {
     return (
@@ -23,6 +25,14 @@ function App() {
                 <Route
                     path="/freework-deploy/freelance-design/"
                     element={<FreelancerDesign />}
+                />
+                <Route
+                    path="/freework-deploy/freelance-kerjaanWeb/"
+                    element={<KerjaanWeb />}
+                />
+                <Route
+                    path="/freework-deploy/freelance-kerjaanDesign/"
+                    element={<KerjaanDesign />}
                 />
             </Routes>
             <FooterWeb />
