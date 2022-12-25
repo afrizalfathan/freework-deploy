@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 import NavDropdown from "react-bootstrap/NavDropdown"
 import { Link } from "react-router-dom"
+import { RxHamburgerMenu } from "react-icons/rx"
 
 function Navigation() {
     const navColor = {
@@ -16,7 +17,9 @@ function Navigation() {
                 <Navbar.Brand href="#home">
                     <h3 className="logo">FreeWork</h3>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav">
+                    <RxHamburgerMenu />
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link>
