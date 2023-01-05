@@ -204,6 +204,10 @@
   background-color: white;
 }
 
+.freelancer-search {
+  margin-top: 15%;
+}
+
 .freelancer-page {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -226,11 +230,53 @@
 .image-profile {
   border-radius: 50%;
   padding: 10% 20% 0 20%;
+}
+
+.job-description {
+  width: 90%;
+  padding: 3.3%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-body p {
+  padding-right: 20%;
 
 }
 
-.freelancer-search {
-  margin-top: 15%;
+.offer-button{
+  margin-right: 10%;
+  font-size: 13px;
+  width: 10rem;
+  border: none;
+  background-color: #e4812f;
+  color: white;
+  height: 2rem;
+}
+
+.offering {
+  margin-top: -10%;
+}
+
+
+.jenis-kerjaan {
+  list-style-type: none;
+  margin-left: -10%;
+}
+
+.range-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 4% 0 4% 0;
+}
+
+.harga-tetap-container {
+  margin-top: 5%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -243,4 +289,39 @@
   grid-template-columns: 25%;
   margin: auto;
   }
+
+  .job-description {
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  .job-offer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+  }
+  
+
+  .job-body button {
+    display: none;
+  }
+
+  .job-body p {
+    padding-right: 1%;
+  }
+
+
+  .job-body{
+    position: relative;
+  }
+
+  .offering {
+    margin-top: 0%;
+  }
+
 }

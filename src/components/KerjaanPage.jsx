@@ -1,34 +1,64 @@
-import React from "react"
-import FilterSearch from "./FilterSearch"
+import React, { useState } from "react"
+import Modal from "react-bootstrap/Modal"
 import Button from "react-bootstrap/Button"
-import Card from "react-bootstrap/Card"
-
+import jobWeb from "../jobWeb"
 function KerjaanPage() {
+    const [show, setShow] = useState(false)
+    const [info, setInfo] = useState([])
+
+    const handleClose = () => setShow(false)
+    const handleShow = (indexID) => {
+        setShow(true)
+        setInfo(indexID)
+    }
+
     return (
-        <div className="freelancer-page">
-            <FilterSearch
-                typeFilter="Kerjaan"
-                headerFilter="Kerjaan apa yang anda butuhkan ?"
-            />
-            <div className="main-container">
-                {[1, 2, 3, 4, 5, 6].map((index) => (
-                    <div>
-                        <Card style={{ width: "18rem" }}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card
-                                    title and make up the bulk of the card's
-                                    content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
+        <>
+            <div className="kerjaan-container">
+                {jobWeb.map((index) => (
+                    <div className="job-description">
+                        <div className="job-header">
+                            <p>
+                                <b>{index.title}</b>
+                            </p>
+                            <div className="job-offer">
+                                <p>
+                                    <b>{index.price}</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="job-body">
+                            <p className="job-desc">{index.desc}</p>
+                        </div>
+                        <button
+                            className="btn btn-warning"
+                            onClick={handleShow.bind(this, index)}
+                        >
+                            Tawar Sekarang
+                        </button>
                     </div>
                 ))}
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{info.title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>{info.desc}</p>
+                        <p>
+                            <b>Fee</b> : {info.price}
+                        </p>
+                        <p>
+                            <b>Jika tertarik hubungi </b>: +62xxxxxxxx
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
-        </div>
+        </>
     )
 }
 

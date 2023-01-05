@@ -5,6 +5,7 @@ import Freelancer from "./Freelancer"
 function FreelancerDesign() {
     return (
         <>
+            
             <Freelancer dataUser={FreelancerDesignUser} />
         </>
     )

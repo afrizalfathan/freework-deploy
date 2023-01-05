@@ -15,7 +15,9 @@ function Navigation() {
         <Navbar style={navColor} expand="lg" variant="light" sticky="top">
             <Container>
                 <Navbar.Brand href="#home">
-                    <h3 className="logo">FreeWork</h3>
+                    <Link to="/freework-deploy/" className="text-dark">
+                        <h3 className="logo">FreeWork</h3>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <RxHamburgerMenu />

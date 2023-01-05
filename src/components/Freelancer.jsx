@@ -1,10 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
+import Modal from "react-bootstrap/Modal"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import { AiFillStar } from "react-icons/ai"
 import FilterSearch from "./FilterSearch"
 
 function Freelancer({ dataUser }) {
+    const [info, setInfo] = useState([])
+    const [show, setShow] = useState(false)
+    const handleClose = () => setShow(false)
+    const handleShow = (indexID) => {
+        setShow(true)
+        setInfo(indexID)
+    }
+
     return (
         <div className="freelancer-page">
             <FilterSearch
@@ -42,6 +51,7 @@ function Freelancer({ dataUser }) {
                                     <Button
                                         variant="warning"
                                         className="text-center mt-4"
+                                        onClick={handleShow.bind(this, index)}
                                     >
                                         Pekerjakan Saya
                                     </Button>
@@ -50,6 +60,46 @@ function Freelancer({ dataUser }) {
                         </Card>
                     </div>
                 ))}
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    backdrop="static"
+                    keyboard={false}
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title>Freelancer</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p>
+                            <b>Nama : </b>
+                            {info.name}
+                        </p>
+                        <p>
+                            <b>Skill : </b> {info.skill}
+                        </p>
+                        <p>
+                            <b>Desc : </b>
+                            {info.desc}
+                        </p>
+                        <p>
+                            <b>Fee : </b>
+                            {info.cash}
+                        </p>
+                        <p>
+                            <b>Rating : </b>
+                            {info.review}
+                        </p>
+                        <p>
+                            <b>Nomor : </b>
+                            +62xxxxxxx
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </div>
     )
